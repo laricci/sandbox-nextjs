@@ -23,6 +23,7 @@ const handler = NextAuth({
         async signIn({ account, profile, user, credentials }) {
             try {
                 // serverless -> Lambda -> dybamodb
+                // dies once it does it's job
                 await connectToDB();
                 
                 // check if a user already existis
