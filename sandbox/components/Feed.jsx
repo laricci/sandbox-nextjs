@@ -30,12 +30,11 @@ const Feed = () => {
       const response = await fetch('/api/prompt');
       const data = await response.json();
 
-      console.log(data.creator);
       setPost(data);
     }
 
     fetchPosts();
-  })
+  }, [])
 
   return (
     <section className="feed">
